@@ -1,3 +1,10 @@
 <body ng-app="saturday">
-<div ui-view></div>
+
+<ng-include src="'client/common/header.ng.html'"></ng-include>
+
+<div class="container">
+    <div ui-view></div>
+    <ng-include src="'client/common/footer.ng.html'"></ng-include>
+</div>
+
 </body>
