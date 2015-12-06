@@ -20,21 +20,24 @@ angular.module('saturday').controller('ProductsCtrl',function ($scope) {
         name: 'iPhone',
         price: 299,
         description: 'Best phone ever',
-        photo: 'images/iphone.jpg'
+        photo: 'images/iphone.jpg',
+        inStock: false
     };
 
     var product2 = {
         name: 'iPod',
         price: 79,
         description: 'Music to my ears',
-        photo: 'images/ipod.jpg'
+        photo: 'images/ipod.jpg',
+        inStock: true
     };
 
     var product3 = {
         name: 'iWatch',
         price: 49,
         description: 'Clock on my wrist',
-        photo: 'images/iwatch.jpg'
+        photo: 'images/iwatch.jpg',
+        inStock: true
     };
 
     $scope.products = [product1, product2, product3];

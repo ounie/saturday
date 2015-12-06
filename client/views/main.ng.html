@@ -11,8 +11,10 @@
 
         <!-- Portfolio Item Row -->
         <div class="row" ng-controller="ProductsCtrl">
-
-            <div ng-repeat="product in products">
+            <input type="text" ng-model="searchProducts" placeholder="search all fields">
+            <input type="text" ng-model="searchName" placeholder="search by Name only">
+            <br><br>
+            <div ng-repeat="product in products | orderBy: 'price' | filter: searchProducts | filter: {name: searchName}">
             <div class="col-md-8">
                 <img class="img-responsive" ng-src="{{product.photo}}" alt="">
             </div>
