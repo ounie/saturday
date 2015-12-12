@@ -1,6 +1,6 @@
 Meteor.startup(function () {
     //Sample insert into a collection
-    //Products.remove({});
+    Products.remove({});
 
     if (Products.find().count() === 0) {
         Products.insert({

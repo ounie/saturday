@@ -26,6 +26,30 @@ angular.module('saturday').config(function($urlRouterProvider, $stateProvider, $
                 ]
             }
         })
+        .state('update', {
+            url: '/update/:id',
+            templateUrl: 'client/views/updateproducts.ng.html',
+            controller: 'UpdateProductsCtrl',
+            resolve: {
+                'subscribe': [
+                    '$meteor', function($meteor) {
+                        return $meteor.subscribe('products');
+                    }
+                ]
+            }
+        })
+        .state('remove', {
+            url: '/remove',
+            templateUrl: 'client/views/removeproducts.ng.html',
+            controller: 'RemoveProductsCtrl',
+            resolve: {
+                'subscribe': [
+                    '$meteor', function($meteor) {
+                        return $meteor.subscribe('products');
+                    }
+                ]
+            }
+        })
     ;
 
     $urlRouterProvider.otherwise("/");

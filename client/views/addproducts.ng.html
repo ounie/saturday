@@ -1,8 +1,22 @@
+<h1>Add Product</h1>
 <form>
     <div class="form-group">
         <label for="name">Product Name</label>
         <input ng-model="name" type="text" class="form-control" placeholder="Enter Product Name">
     </div>
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input ng-model="description" type="text" class="form-control" placeholder="Enter Product Description">
+    </div>
+    <div class="form-group">
+        <label for="price">Price</label>
+        <input ng-model="price" type="number" class="form-control" placeholder="Enter Price">
+    </div>
+    <div class="form-group">
+        <label for="photo">Photo</label>
+        <input id="photo" ng-model="photo" type="text" class="form-control" placeholder="Enter Photo">
+    </div>
+
 
     <button ng-click="addProduct()" type="submit" class="btn btn-default">Submit</button>
     <div>{{message}}</div>
