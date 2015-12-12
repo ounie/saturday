@@ -1,11 +1,13 @@
 angular.module('saturday').controller('ProductsCtrl',['$scope', '$meteor', function ($scope, $meteor) {
 
-    //$scope.products = Products.subscribe('products');
+    //$scope.products = Products;
 
-    $scope.products = $meteor.collection(function (){
+   /*$scope.products = $meteor.collection(function (){
         return Products.find ()
-    }).subscribe('products');
+    });
+*/
+    $scope.products = Products.find().fetch();
 
-   // console.log($scope.products);
+   //console.log($scope.products);
 
 }]);
