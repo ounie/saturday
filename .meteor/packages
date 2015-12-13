@@ -17,3 +17,8 @@ es5-shim                # ECMAScript 5 compatibility for older browsers.
 twbs:bootstrap
 angular
 angularui:angular-ui-router
+accounts-password
+accounts-ui
+dotansimha:accounts-ui-angular
+accounts-facebook
+accounts-twitter

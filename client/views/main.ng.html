@@ -26,8 +26,10 @@
                 <ul>
                     <li>Price: {{product.price | currency}}</li>
                 </ul>
+                <div ng-show="userLogin">
                 <a href="update/{{product._id}}"><button>Edit Product</button></a>
                 <button ng-click="remove(product._id)" class="btn btn-danger">Remove</button>
+                </div>
             </div>
             </div>
         </div>

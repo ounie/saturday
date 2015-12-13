@@ -1,3 +1,7 @@
+
+
+
+
 angular.module('saturday').config(function($urlRouterProvider, $stateProvider, $locationProvider){
 
     $locationProvider.html5Mode(true);
@@ -35,6 +39,12 @@ angular.module('saturday').config(function($urlRouterProvider, $stateProvider, $
                     '$meteor', function($meteor) {
                         return $meteor.subscribe('products');
                     }
+                ]
+            },
+            resolve: {
+                "currentUser": ["$meteor", function($meteor){
+                    return $meteor.requireUser();
+                }
                 ]
             }
         })
